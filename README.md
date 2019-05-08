@@ -28,9 +28,9 @@ $test = new Test('example');
 $test
     ->variation('title1', 'Hello World', 40) // 40% probability
     ->variation('title2', 'Foo Bar', 30) // 30% probability
-    ->variation('title3', function () {
+    ->variation('title3', function () { // 30% probability
         return 'Title from a callback function';
-    }, 30) // 30% probability
+    }, 30)
 ;
     
 $debug  = [];
