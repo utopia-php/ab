@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/utopia-php/ab.svg?branch=master)](https://travis-ci.org/utopia-php/ab)
 ![Total Downloads](https://img.shields.io/packagist/dt/utopia-php/ab.svg)
-![License](https://img.shields.io/github/license/utopia-php/ab.svg)
+[![Chat With Us](https://img.shields.io/gitter/room/utopia-php/community.svg)](https://gitter.im/utopia-php/community?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
 
 Utopia AB Tests library is simple and lite library for managing AB tests on the server side. This library is aiming to be as simple and easy to learn and use.
 
