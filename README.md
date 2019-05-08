@@ -43,6 +43,10 @@ var_dump($debug);
     
 ```
 
+If no probability value is passed to the variation, all variations with no probability values will be given equal values from the remaining 100% of the test variations.
+
+When passing a closure as value for your variation the callback will be executed only once the test is being run using the Tests::run() method.
+
 ## System Requirements
 
 Utopia Framework requires PHP 7.1 or later. We recommend using the latest PHP version whenever possible.
