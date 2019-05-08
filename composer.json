@@ -1,6 +1,6 @@
 {
     "name": "utopia-php/ab",
-    "description": "A simple CLI library to manage server side AB testing",
+    "description": "A simple AB Test library to manage server side AB testing",
     "type": "library",
     "keywords": ["php","framework", "upf", "utopia", "ab", "ab test", "ab testing", "ab tests"],
     "license": "MIT",
