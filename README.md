@@ -15,7 +15,6 @@ Install using composer:
 composer require utopia-php/ab
 ```
 
-script.php
 ```php
 <?php
 
