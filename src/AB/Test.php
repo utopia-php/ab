@@ -79,7 +79,7 @@ class Test {
 
         $return = $this->variations[$result];
 
-        if(is_callable($return)) {
+        if(\is_callable($return)) {
             $return = $return();
         }
 
@@ -119,7 +119,7 @@ class Test {
             }
         }
 
-        $number     = rand(0, array_sum($this->probabilities) * 10);
+        $number     = \rand(0, \array_sum($this->probabilities) * 10);
         $starter    = 0;
         $return     = null;
 
