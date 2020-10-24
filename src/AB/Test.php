@@ -4,8 +4,8 @@ namespace Utopia\AB;
 
 use Exception;
 
-class Test {
-
+class Test
+{
     /**
      * @var array
      */
@@ -73,15 +73,15 @@ class Test {
      *
      * @throws Exception
      * 
-     * @return $this
+     * @return mixed
      */
-    public function run(): self
+    public function run()
     {
         $result = $this->chance();
 
         $return = $this->variations[$result];
 
-        if(\is_callable($return)) {
+        if (\is_callable($return)) {
             $return = $return();
         }
 
@@ -104,18 +104,18 @@ class Test {
         foreach ($this->probabilities as $name => $value) {
             $sum += $value;
 
-            if(empty($value)) {
+            if (empty($value)) {
                 $empty++;
             }
         }
 
-        if($sum > 100) {
+        if ($sum > 100) {
             throw new Exception('Test Error: Total variation probabilities is bigger than 100%');
         }
 
-        if($sum < 100) { // Auto set probability when it has no value
+        if ($sum < 100) { // Auto set probability when it has no value
             foreach ($this->probabilities as $name => $value) {
-                if(empty($value)) {
+                if (empty($value)) {
                     $this->probabilities[$name] = (100 - $sum) / $empty;
                 }
             }
@@ -125,10 +125,10 @@ class Test {
         $starter    = 0;
         $return     = '';
 
-        foreach($this->probabilities as $key => $val) {
+        foreach ($this->probabilities as $key => $val) {
             $starter += $val * 10;
 
-            if($number <= $starter) {
+            if ($number <= $starter) {
                 $return = $key;
                 break;
             }
