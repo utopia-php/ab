@@ -23,12 +23,12 @@ class TestTest extends TestCase
      */
     protected $test = null;
 
-    public function setUp()
+    public function setUp(): void
     {
         $this->test = new Test('unit-test');
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         $this->test = null;
     }
