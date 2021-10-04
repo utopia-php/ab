@@ -32,9 +32,9 @@ body:
       description: "What did actually happen? Add screenshots, if applicable."
       placeholder: "It actually ..."
   - type: dropdown
-    id: appwrite-version
+    id: utopia-version
     attributes:
-      label: "🎲 Appwrite version"
+      label: "🎲 Utopia AB version"
       description: "What version of Appwrite are you running?"
       options:
         - Version 0.10.x
