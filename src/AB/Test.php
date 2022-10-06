@@ -9,14 +9,14 @@ class Test
     /**
      * @var array
      */
-    static protected $results = [];
+    protected static $results = [];
 
     /**
      * Get Result of All Tests
      *
      * @return array
      */
-    static public function results()
+    public static function results()
     {
         return self::$results;
     }
@@ -45,7 +45,7 @@ class Test
     /**
      * Test constructor.
      *
-     * @param string $name
+     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -55,8 +55,8 @@ class Test
     /**
      * Add a New Variation to Test
      *
-     * @param string $name
-     * @param mixed $value
+     * @param  string  $name
+     * @param  mixed  $value
      * @param $probability
      * @return $this
      */
@@ -71,9 +71,9 @@ class Test
     /**
      * Run Test and Get Result
      *
-     * @throws Exception
-     * 
      * @return mixed
+     *
+     * @throws Exception
      */
     public function run()
     {
@@ -93,8 +93,9 @@ class Test
     /**
      * Get Random Variation Based on Probabilities Chance
      *
-     * @throws Exception
      * @return string
+     *
+     * @throws Exception
      */
     protected function chance(): string
     {
@@ -121,9 +122,9 @@ class Test
             }
         }
 
-        $number     = \rand(0, (int)\array_sum($this->probabilities) * 10);
-        $starter    = 0;
-        $return     = '';
+        $number = \rand(0, (int) \array_sum($this->probabilities) * 10);
+        $starter = 0;
+        $return = '';
 
         foreach ($this->probabilities as $key => $val) {
             $starter += $val * 10;

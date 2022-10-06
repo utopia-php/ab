@@ -2,19 +2,20 @@
 /**
  * Utopia PHP Framework
  *
- * @package AB
- * @subpackage Tests
  *
  * @link https://github.com/utopia-php/framework
+ *
  * @author Eldad Fux <eldad@appwrite.io>
+ *
  * @version 1.0 RC4
+ *
  * @license The MIT License (MIT) <http://www.opensource.org/licenses/mit-license.php>
  */
 
 namespace Utopia\Tests;
 
-use Utopia\AB\Test;
 use PHPUnit\Framework\TestCase;
+use Utopia\AB\Test;
 
 class TestTest extends TestCase
 {
@@ -41,9 +42,9 @@ class TestTest extends TestCase
             ->variation('title3', function () {
                 return 'Title: Title from a callback function';
             }, 30) // 30% probability
-        ;
+;
 
-        for($i=0; $i<100; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $value = $this->test->run();
 
             $this->assertStringStartsWith('Title:', $value);
@@ -55,22 +56,20 @@ class TestTest extends TestCase
             ->variation('title3', function () {
                 return 'Title: Title from a callback function';
             }, 0) // 0% probability
-        ;
+;
 
-        for($i=0; $i<100; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $value = $this->test->run();
 
             $this->assertEquals('Title: Hello World', $value);
         }
-
 
         $test = new Test('another-test');
 
         $test
             ->variation('option1', 'title1')
             ->variation('option2', 'title2')
-            ->variation('option3', 'title3')
-        ;
+            ->variation('option3', 'title3');
 
         $test->run();
 
