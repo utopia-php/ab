@@ -7,16 +7,16 @@ use Exception;
 class Test
 {
     /**
-     * @var array
+     * @var array<string, mixed>
      */
     static protected $results = [];
 
     /**
      * Get Result of All Tests
      *
-     * @return array
+     * @return array<string, mixed>
      */
-    static public function results()
+    static public function results(): array
     {
         return self::$results;
     }
@@ -31,14 +31,14 @@ class Test
     /**
      * Test Variations
      *
-     * @var array
+     * @var array<string, mixed>
      */
     protected $variations = [];
 
     /**
      * Test Variations Probabilities
      *
-     * @var array
+     * @var array<string, float|int|null>
      */
     protected $probabilities = [];
 
@@ -60,7 +60,7 @@ class Test
      * @param $probability
      * @return $this
      */
-    public function variation(string $name, $value, int $probability = null): self
+    public function variation(string $name, mixed $value, int $probability = null): self
     {
         $this->variations[$name] = $value;
         $this->probabilities[$name] = $probability;
@@ -75,7 +75,7 @@ class Test
      * 
      * @return mixed
      */
-    public function run()
+    public function run(): mixed
     {
         $result = $this->chance();
 
