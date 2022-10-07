@@ -13,29 +13,25 @@
 
 namespace Utopia\Tests;
 
+use Exception;
 use Utopia\AB\Test;
 use PHPUnit\Framework\TestCase;
 
 class TestTest extends TestCase
 {
-    /**
-     * @var Test
-     */
-    protected $test = null;
-
     public function setUp(): void
     {
-        $this->test = new Test('unit-test');
     }
 
     public function tearDown(): void
     {
-        $this->test = null;
     }
 
-    public function testTest()
+    public function testTest(): void
     {
-        $this->test
+        $test = new Test('unit-test');
+
+        $test
             ->variation('title1', 'Title: Hello World', 40) // 40% probability
             ->variation('title2', 'Title: Foo Bar', 30) // 30% probability
             ->variation('title3', function () {
@@ -44,12 +40,12 @@ class TestTest extends TestCase
         ;
 
         for($i=0; $i<100; $i++) {
-            $value = $this->test->run();
+            $value = \strval($test->run());
 
             $this->assertStringStartsWith('Title:', $value);
         }
 
-        $this->test
+        $test
             ->variation('title1', 'Title: Hello World', 100) // 100% probability
             ->variation('title2', 'Title: Foo Bar', 0) // 0% probability
             ->variation('title3', function () {
@@ -58,7 +54,7 @@ class TestTest extends TestCase
         ;
 
         for($i=0; $i<100; $i++) {
-            $value = $this->test->run();
+            $value = $test->run();
 
             $this->assertEquals('Title: Hello World', $value);
         }
