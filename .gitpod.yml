@@ -1,0 +1,12 @@
+tasks:
+  - name: Run Utopia PHP AB Tests
+    init: |
+      composer install --ignore-platform-reqs
+    command: |
+      vendor/bin/phpunit --configuration phpunit.xml
+      vendor/bin/psalm --show-info=true
+
+vscode:
+  extensions:
+    - ms-azuretools.vscode-docker
+    - zobo.php-intellisense
