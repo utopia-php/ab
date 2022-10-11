@@ -4,12 +4,6 @@
     "type": "library",
     "keywords": ["php","framework", "upf", "utopia", "ab", "ab test", "ab testing", "ab tests"],
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Eldad Fux",
-            "email": "eldad@appwrite.io"
-        }
-    ],
     "autoload": {
         "psr-4": {"Utopia\\AB\\": "src/AB"}
     },
