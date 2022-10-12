@@ -1,7 +1,6 @@
 {
     "name": "Run Utopia PHP AB Tests",
-    "initializeCommand": "composer install --ignore-platform-reqs",
-    "onCreateCommand": "vendor/bin/phpunit --configuration phpunit.xml && vendor/bin/psalm --show-info=true",
+    "onCreateCommand": "composer install --ignore-platform-reqs",
     "extensions": [
         "ms-azuretools.vscode-docker",
         "zobo.php-intellisense"
