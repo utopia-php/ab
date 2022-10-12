@@ -1,5 +1,5 @@
 tasks:
-  - name: Run Utopia PHP AB Tests
+  - name: PHP preparations
     init: |
       composer install --ignore-platform-reqs
 
