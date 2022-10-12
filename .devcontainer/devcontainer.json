@@ -1,5 +1,5 @@
 {
-    "name": "Run Utopia PHP AB Tests",
+    "name": "PHP preparations",
     "onCreateCommand": "composer install --ignore-platform-reqs",
     "extensions": [
         "ms-azuretools.vscode-docker",
