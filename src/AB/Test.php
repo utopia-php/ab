@@ -44,8 +44,6 @@ class Test
 
     /**
      * Test constructor.
-     *
-     * @param  string  $name
      */
     public function __construct(string $name)
     {
@@ -55,9 +53,7 @@ class Test
     /**
      * Add a New Variation to Test
      *
-     * @param  string  $name
      * @param  mixed  $value
-     * @param $probability
      * @return $this
      */
     public function variation(string $name, $value, int $probability = null): self
@@ -93,7 +89,6 @@ class Test
     /**
      * Get Random Variation Based on Probabilities Chance
      *
-     * @return string
      *
      * @throws Exception
      */

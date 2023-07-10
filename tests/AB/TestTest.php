@@ -29,8 +29,7 @@ class TestTest extends TestCase
             ->variation('title2', 'Title: Foo Bar', 30) // 30% probability
             ->variation('title3', function () {
                 return 'Title: Title from a callback function';
-            }, 30) // 30% probability
-;
+            }, 30); // 30% probability
 
         for ($i = 0; $i < 100; $i++) {
             $value = $this->test->run();
@@ -43,8 +42,7 @@ class TestTest extends TestCase
             ->variation('title2', 'Title: Foo Bar', 0) // 0% probability
             ->variation('title3', function () {
                 return 'Title: Title from a callback function';
-            }, 0) // 0% probability
-;
+            }, 0); // 0% probability
 
         for ($i = 0; $i < 100; $i++) {
             $value = $this->test->run();
