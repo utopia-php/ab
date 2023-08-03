@@ -9,7 +9,8 @@
     },
     "scripts": {
         "lint": "./vendor/bin/pint --test",
-        "format": "./vendor/bin/pint"
+        "format": "./vendor/bin/pint",
+        "test": "vendor/bin/phpunit --configuration phpunit.xml"
     },
     "require": {
         "php": ">=7.4"
